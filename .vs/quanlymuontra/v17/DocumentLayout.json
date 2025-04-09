@@ -1,0 +1,98 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Nghia Nguyen\\source\\repos\\quanlymuontra\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{091BB29E-84BC-462C-83DD-1F70E26D3470}|quanlymuontra\\quanlymuontra.csproj|c:\\users\\nghia nguyen\\source\\repos\\quanlymuontra\\quanlymuontra\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{091BB29E-84BC-462C-83DD-1F70E26D3470}|quanlymuontra\\quanlymuontra.csproj|solutionrelative:quanlymuontra\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{091BB29E-84BC-462C-83DD-1F70E26D3470}|quanlymuontra\\quanlymuontra.csproj|c:\\users\\nghia nguyen\\source\\repos\\quanlymuontra\\quanlymuontra\\giaodienchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{091BB29E-84BC-462C-83DD-1F70E26D3470}|quanlymuontra\\quanlymuontra.csproj|solutionrelative:quanlymuontra\\giaodienchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{091BB29E-84BC-462C-83DD-1F70E26D3470}|quanlymuontra\\quanlymuontra.csproj|c:\\users\\nghia nguyen\\source\\repos\\quanlymuontra\\quanlymuontra\\giaodienchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{091BB29E-84BC-462C-83DD-1F70E26D3470}|quanlymuontra\\quanlymuontra.csproj|solutionrelative:quanlymuontra\\giaodienchinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{091BB29E-84BC-462C-83DD-1F70E26D3470}|quanlymuontra\\quanlymuontra.csproj|c:\\users\\nghia nguyen\\source\\repos\\quanlymuontra\\quanlymuontra\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{091BB29E-84BC-462C-83DD-1F70E26D3470}|quanlymuontra\\quanlymuontra.csproj|solutionrelative:quanlymuontra\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 43,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "giaodienchinh.cs",
+              "DocumentMoniker": "C:\\Users\\Nghia Nguyen\\source\\repos\\quanlymuontra\\quanlymuontra\\giaodienchinh.cs",
+              "RelativeDocumentMoniker": "quanlymuontra\\giaodienchinh.cs",
+              "ToolTip": "C:\\Users\\Nghia Nguyen\\source\\repos\\quanlymuontra\\quanlymuontra\\giaodienchinh.cs",
+              "RelativeToolTip": "quanlymuontra\\giaodienchinh.cs",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAIwN8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T14:01:25.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "giaodienchinh.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Nghia Nguyen\\source\\repos\\quanlymuontra\\quanlymuontra\\giaodienchinh.cs",
+              "RelativeDocumentMoniker": "quanlymuontra\\giaodienchinh.cs",
+              "ToolTip": "C:\\Users\\Nghia Nguyen\\source\\repos\\quanlymuontra\\quanlymuontra\\giaodienchinh.cs [Design]",
+              "RelativeToolTip": "quanlymuontra\\giaodienchinh.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T14:01:22.778Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DangNhap.cs",
+              "DocumentMoniker": "C:\\Users\\Nghia Nguyen\\source\\repos\\quanlymuontra\\quanlymuontra\\DangNhap.cs",
+              "RelativeDocumentMoniker": "quanlymuontra\\DangNhap.cs",
+              "ToolTip": "C:\\Users\\Nghia Nguyen\\source\\repos\\quanlymuontra\\quanlymuontra\\DangNhap.cs",
+              "RelativeToolTip": "quanlymuontra\\DangNhap.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAIwDQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T13:33:47.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DangNhap.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Nghia Nguyen\\source\\repos\\quanlymuontra\\quanlymuontra\\DangNhap.cs",
+              "RelativeDocumentMoniker": "quanlymuontra\\DangNhap.cs",
+              "ToolTip": "C:\\Users\\Nghia Nguyen\\source\\repos\\quanlymuontra\\quanlymuontra\\DangNhap.cs [Design]",
+              "RelativeToolTip": "quanlymuontra\\DangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T13:30:05.054Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
