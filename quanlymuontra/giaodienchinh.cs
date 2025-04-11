@@ -15,11 +15,21 @@ namespace quanlymuontra
     public partial class giaodienchinh : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-F26RCTP\MSSQLSERVER01;Initial Catalog=quanlymuontra;Integrated Security=True");
+        string taikhoan = ""; string matkhau = ""; string email = ""; string quyen = "";
         public giaodienchinh()
         {
             InitializeComponent();
         }
+        public giaodienchinh(string taikhoan, string matkhau, string email, string quyen)
+        {
+            InitializeComponent();
+            this.taikhoan = taikhoan;
+            this.matkhau = matkhau;
+            this.email = email;
+            this.quyen = quyen;
 
+
+        }
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
@@ -63,7 +73,16 @@ namespace quanlymuontra
 
         private void button3_Click(object sender, EventArgs e)
         {
-            hienmenu(qlkspanel);
+            if (quyen == "admin")
+            {
+                hienmenu(qlkspanel);
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền truy cập vào chức năng này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
 
         }
 
@@ -215,9 +234,8 @@ namespace quanlymuontra
         {
             this.button12.ForeColor = Color.White;
         }
-        
-        private string taikhoan = "";
-        private string loaitk;
+
+
 
         private void giaodienchinh_Load(object sender, EventArgs e)
         {
@@ -246,22 +264,37 @@ namespace quanlymuontra
 
         private void button8_MouseMove(object sender, MouseEventArgs e)
         {
-            this.button6.ForeColor = ColorTranslator.FromHtml("248, 132, 61");
+            this.button8.ForeColor = ColorTranslator.FromHtml("248, 132, 61");
         }
 
         private void button8_MouseLeave(object sender, EventArgs e)
         {
-            this.button6.ForeColor = Color.White;
+            this.button8.ForeColor = Color.White;
         }
 
         private void button10_MouseMove(object sender, MouseEventArgs e)
         {
-            this.button6.ForeColor = ColorTranslator.FromHtml("248, 132, 61");
+            this.button10.ForeColor = ColorTranslator.FromHtml("248, 132, 61");
         }
 
         private void button10_MouseLeave(object sender, EventArgs e)
         {
-            this.button6.ForeColor = Color.White;
+            this.button10.ForeColor = Color.White;
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new qlnd());
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new baocaothongke());
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new trangchu());
         }
     }
 }

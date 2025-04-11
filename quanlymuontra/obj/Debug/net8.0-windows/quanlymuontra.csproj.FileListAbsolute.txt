@@ -32,3 +32,13 @@ C:\Users\Nghia Nguyen\source\repos\quanlymuontra\quanlymuontra\obj\Debug\net8.0-
 C:\Users\Nghia Nguyen\source\repos\quanlymuontra\quanlymuontra\obj\Debug\net8.0-windows\quanlymuontra.Form8.resources
 C:\Users\Nghia Nguyen\source\repos\quanlymuontra\quanlymuontra\obj\Debug\net8.0-windows\quanlymuontra.Sach.resources
 C:\Users\Nghia Nguyen\source\repos\quanlymuontra\quanlymuontra\obj\Debug\net8.0-windows\quanlymuontra.quanlydl.resources
+C:\Users\Nghia Nguyen\source\repos\quanlymuontra\quanlymuontra\obj\Debug\net8.0-windows\quanlymuontra.sourcelink.json
+C:\Users\Nghia Nguyen\source\repos\quanlymuontra\quanlymuontra\bin\Debug\net8.0-windows\BLL.dll
+C:\Users\Nghia Nguyen\source\repos\quanlymuontra\quanlymuontra\bin\Debug\net8.0-windows\DAL.dll
+C:\Users\Nghia Nguyen\source\repos\quanlymuontra\quanlymuontra\bin\Debug\net8.0-windows\DTO.dll
+C:\Users\Nghia Nguyen\source\repos\quanlymuontra\quanlymuontra\bin\Debug\net8.0-windows\BLL.pdb
+C:\Users\Nghia Nguyen\source\repos\quanlymuontra\quanlymuontra\bin\Debug\net8.0-windows\DTO.pdb
+C:\Users\Nghia Nguyen\source\repos\quanlymuontra\quanlymuontra\bin\Debug\net8.0-windows\DAL.pdb
+C:\Users\Nghia Nguyen\source\repos\quanlymuontra\quanlymuontra\obj\Debug\net8.0-windows\quanlymuontra.baocaothongke.resources
+C:\Users\Nghia Nguyen\source\repos\quanlymuontra\quanlymuontra\obj\Debug\net8.0-windows\quanlymuontra.qlnd.resources
+C:\Users\Nghia Nguyen\source\repos\quanlymuontra\quanlymuontra\obj\Debug\net8.0-windows\quanlymuontra.trangchu.resources

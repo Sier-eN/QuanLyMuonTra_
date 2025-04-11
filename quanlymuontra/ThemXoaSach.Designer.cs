@@ -29,13 +29,20 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             button1 = new Button();
             label5 = new Label();
             button2 = new Button();
             button3 = new Button();
             panel1 = new Panel();
+            dateTimePicker1 = new DateTimePicker();
             tg = new ComboBox();
             themtl = new ComboBox();
             button4 = new Button();
@@ -53,7 +60,6 @@
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
-            dateTimePicker1 = new DateTimePicker();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -142,6 +148,13 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(320, 573);
             panel1.TabIndex = 48;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(319, 181);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 60;
             // 
             // tg
             // 
@@ -267,25 +280,25 @@
             dataGridView1.ColumnHeadersHeight = 40;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { MS, Column2, Column3, Column4, Column5, Column6 });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(34, 55, 113);
-            dataGridViewCellStyle2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.FromArgb(34, 55, 113);
+            dataGridViewCellStyle8.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle8.ForeColor = Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             dataGridView1.Location = new Point(338, 12);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(34, 55, 113);
-            dataGridViewCellStyle3.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = Color.FromArgb(34, 55, 113);
+            dataGridViewCellStyle9.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle9.ForeColor = Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             dataGridView1.Size = new Size(703, 573);
             dataGridView1.TabIndex = 28;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
@@ -293,6 +306,9 @@
             // MS
             // 
             MS.DataPropertyName = "masach";
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(34, 55, 113);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            MS.DefaultCellStyle = dataGridViewCellStyle2;
             MS.HeaderText = "MS";
             MS.Name = "MS";
             MS.ReadOnly = true;
@@ -302,6 +318,9 @@
             // 
             Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             Column2.DataPropertyName = "tensach";
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(34, 55, 113);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            Column2.DefaultCellStyle = dataGridViewCellStyle3;
             Column2.FillWeight = 98.68021F;
             Column2.HeaderText = "Tên Sách";
             Column2.Name = "Column2";
@@ -311,6 +330,9 @@
             // Column3
             // 
             Column3.DataPropertyName = "tacgia";
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(34, 55, 113);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            Column3.DefaultCellStyle = dataGridViewCellStyle4;
             Column3.FillWeight = 98.68021F;
             Column3.HeaderText = "Tác Giả";
             Column3.Name = "Column3";
@@ -319,6 +341,9 @@
             // Column4
             // 
             Column4.DataPropertyName = "theloai";
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(34, 55, 113);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            Column4.DefaultCellStyle = dataGridViewCellStyle5;
             Column4.FillWeight = 98.68021F;
             Column4.HeaderText = "Thể Loại";
             Column4.Name = "Column4";
@@ -328,6 +353,9 @@
             // Column5
             // 
             Column5.DataPropertyName = "ngayxuatban";
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(34, 55, 113);
+            dataGridViewCellStyle6.ForeColor = Color.White;
+            Column5.DefaultCellStyle = dataGridViewCellStyle6;
             Column5.FillWeight = 98.68021F;
             Column5.HeaderText = "NXB";
             Column5.Name = "Column5";
@@ -338,17 +366,13 @@
             // 
             Column6.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Column6.DataPropertyName = "trangthai";
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(34, 55, 113);
+            dataGridViewCellStyle7.ForeColor = Color.White;
+            Column6.DefaultCellStyle = dataGridViewCellStyle7;
             Column6.FillWeight = 98.68021F;
             Column6.HeaderText = "Trạng Thái";
             Column6.Name = "Column6";
             Column6.ReadOnly = true;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(319, 181);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 60;
             // 
             // Form5
             // 
@@ -385,12 +409,12 @@
         private ComboBox themtl;
         private DataGridView dataGridView1;
         private ComboBox tg;
+        private DateTimePicker dateTimePicker1;
         private DataGridViewTextBoxColumn MS;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
-        private DateTimePicker dateTimePicker1;
     }
 }

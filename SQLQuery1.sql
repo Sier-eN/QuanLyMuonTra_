@@ -1,1 +1,1 @@
-﻿SELECT * FROM dksach
+﻿select * from dksach

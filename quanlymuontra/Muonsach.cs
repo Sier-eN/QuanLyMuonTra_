@@ -15,6 +15,7 @@ namespace quanlymuontra
     public partial class Form4 : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-F26RCTP\MSSQLSERVER01;Initial Catalog=quanlymuontra;Integrated Security=True");
+        private int masach = 0;
         public Form4()
         {
             InitializeComponent();
@@ -67,9 +68,9 @@ namespace quanlymuontra
             {
                 MessageBox.Show("Sách hiện tại không thể mượn", "Thông Báo Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else 
+            else
             {
-                
+
                 if (con.State == ConnectionState.Closed)
                 {
                     try
@@ -88,11 +89,11 @@ namespace quanlymuontra
                             cmd.Parameters.AddWithValue("email", email.Text.Trim());
                             cmd.Parameters.AddWithValue("@ngaymuon", today.ToString());
                             cmd.Parameters.AddWithValue("@hantra", hantra.Value);
-                            
+
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("Mượn thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             dpsachm();
-                            
+
                         }
                     }
                     catch (Exception ex)
@@ -105,7 +106,7 @@ namespace quanlymuontra
                     }
                 }
             }
-            
+
         }
 
         private void Form4_Load(object sender, EventArgs e)

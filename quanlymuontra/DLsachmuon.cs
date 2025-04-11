@@ -17,6 +17,7 @@ namespace quanlymuontra
         
         public string ngaymuon { get; set; }
         
+        
         public string hantra {  get; set; } 
         public string trangthai { get; set; }
         public List<DLsachmuon>dLSachmuon()
@@ -28,7 +29,7 @@ namespace quanlymuontra
                 try
                 {
                     con.Open();
-                    string chondl = "SELECT * FROM dksach WHERE ngaytra IS NULL";
+                    string chondl = "SELECT * FROM dksach ";
                     using (SqlCommand cmd = new SqlCommand(chondl, con))
                     {
                         SqlDataReader reader = cmd.ExecuteReader();
@@ -38,7 +39,9 @@ namespace quanlymuontra
                             DLsachmuon dlm = new DLsachmuon();
                             dlm.masach = (int)reader[masach];
                             dlm.tensach = reader["tensach"].ToString();
+                           
                             dlm.ngaymuon = reader["ngaymuon"].ToString();
+                            
                             dlm.hantra = reader["hantra"].ToString();
                             dlm.trangthai = reader["trangthai"].ToString();
                             listdata.Add(dlm);

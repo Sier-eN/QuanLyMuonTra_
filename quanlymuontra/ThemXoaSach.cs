@@ -245,7 +245,7 @@ namespace quanlymuontra
                         {
                             con.Open();
                             DateTime today = DateTime.Today;
-                            string updateData = "UPDATE sach SET tensach =@tensach" + ", tacgia = @tacgia " + ", theloai= @theloai" +
+                            string updateData = "UPDATE sach SET tensach =@tensach" + ", tacgia = @tacgia " + ", theloai= @theloai" +",ngaysua = @ngaysua"+
                                 ", trangthai = @trangthai WHERE masach = @masach";
 
                             using (SqlCommand cmd = new SqlCommand(updateData, con))

@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System;
 
+
 namespace quanlymuontra
 {
     public partial class Form1 : Form
@@ -25,8 +26,7 @@ namespace quanlymuontra
             txtpass.PasswordChar = '*';
         }
 
-        public string taikhoan = "";
-        public string loaitk;
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -42,16 +42,7 @@ namespace quanlymuontra
                 txtpass.Select();
                 return;
             }
-            taikhoan=txttk.Text;
-            loaitk = "";
-            if (taikhoan.Equals("admin"))
-            {
-                loaitk = "admin";
-            }
-            else if (taikhoan.Equals("user"))
-            {
-                loaitk="user";
-            }
+            
             if(con.State== ConnectionState.Closed)
             {
                 con.Open();
@@ -65,7 +56,7 @@ namespace quanlymuontra
             if(rs.Rows.Count > 0)
             {
                 MessageBox.Show("Đăng Nhập Thành Công");
-                giaodienchinh gdc = new giaodienchinh();
+                giaodienchinh gdc = new giaodienchinh(dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(),dt.Rows[0][3].ToString(),dt.Rows[0][4].ToString());
                 gdc.Show();
                 this.Hide();
             }
