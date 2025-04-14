@@ -52,7 +52,6 @@
             label1 = new Label();
             tensach = new TextBox();
             label5 = new Label();
-            button1 = new Button();
             button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -96,6 +95,7 @@
             dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             dataGridView1.Size = new Size(1029, 404);
             dataGridView1.TabIndex = 29;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // MS
             // 
@@ -177,7 +177,8 @@
             tg.Name = "tg";
             tg.Size = new Size(241, 31);
             tg.TabIndex = 68;
-            tg.SelectedIndexChanged += tg_SelectedIndexChanged;
+            tg.ValueMemberChanged += tg_ValueMemberChanged_1;
+            tg.SelectedValueChanged += tg_SelectedValueChanged;
             // 
             // themtl
             // 
@@ -187,6 +188,7 @@
             themtl.Name = "themtl";
             themtl.Size = new Size(253, 31);
             themtl.TabIndex = 67;
+            themtl.SelectedValueChanged += themtl_SelectedValueChanged;
             // 
             // trangthai
             // 
@@ -197,6 +199,7 @@
             trangthai.Name = "trangthai";
             trangthai.Size = new Size(180, 31);
             trangthai.TabIndex = 66;
+            trangthai.SelectedValueChanged += trangthai_SelectedValueChanged;
             // 
             // label6
             // 
@@ -238,6 +241,7 @@
             tensach.Name = "tensach";
             tensach.Size = new Size(239, 32);
             tensach.TabIndex = 62;
+            tensach.TextChanged += tensach_TextChanged;
             // 
             // label5
             // 
@@ -250,21 +254,6 @@
             label5.TabIndex = 61;
             label5.Text = "Tên Sách:";
             // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(34, 55, 113);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Times New Roman", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(756, 85);
-            button1.Name = "button1";
-            button1.Size = new Size(136, 53);
-            button1.TabIndex = 69;
-            button1.Text = "Tìm Kiếm";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
             // button2
             // 
             button2.BackColor = Color.FromArgb(34, 55, 113);
@@ -272,12 +261,14 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Times New Roman", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(898, 85);
+            button2.Location = new Point(745, 85);
             button2.Name = "button2";
             button2.Size = new Size(77, 53);
             button2.TabIndex = 70;
             button2.Text = "Xóa";
             button2.UseVisualStyleBackColor = false;
+            button2.MouseLeave += button2_MouseLeave;
+            button2.MouseMove += button2_MouseMove;
             // 
             // trangchu
             // 
@@ -286,7 +277,6 @@
             BackColor = Color.FromArgb(66, 96, 206);
             ClientSize = new Size(1053, 597);
             Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(tg);
             Controls.Add(themtl);
             Controls.Add(trangthai);
@@ -321,7 +311,6 @@
         private Label label1;
         private TextBox tensach;
         private Label label5;
-        private Button button1;
         private Button button2;
     }
 }

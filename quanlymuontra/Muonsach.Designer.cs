@@ -1,4 +1,5 @@
-﻿namespace quanlymuontra
+﻿using System.Windows.Forms;
+namespace quanlymuontra
 {
     partial class Form4
     {
@@ -31,12 +32,12 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
@@ -44,6 +45,9 @@
             DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             label1 = new Label();
             dataGridView1 = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
             button1 = new Button();
             email = new TextBox();
             iduser = new TextBox();
@@ -53,18 +57,15 @@
             hantra = new DateTimePicker();
             label2 = new Label();
             dataGridView2 = new DataGridView();
-            tensach = new TextBox();
-            trangthai = new TextBox();
-            label6 = new Label();
-            label7 = new Label();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
+            tensach = new TextBox();
+            trangthai = new TextBox();
+            label6 = new Label();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
@@ -122,6 +123,33 @@
             dataGridView1.TabIndex = 3;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // Column1
+            // 
+            Column1.DataPropertyName = "masach";
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(34, 55, 113);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            Column1.HeaderText = "MS";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.DataPropertyName = "tensach";
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(34, 55, 113);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            Column2.HeaderText = "Tên Sách";
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.DataPropertyName = "trangthai";
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(34, 55, 113);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            Column3.DefaultCellStyle = dataGridViewCellStyle4;
+            Column3.HeaderText = "Trạng Thái";
+            Column3.Name = "Column3";
+            // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(34, 55, 113);
@@ -129,7 +157,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Times New Roman", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(392, 405);
+            button1.Location = new Point(789, 408);
             button1.Name = "button1";
             button1.Size = new Size(224, 53);
             button1.TabIndex = 27;
@@ -142,7 +170,7 @@
             // email
             // 
             email.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            email.Location = new Point(162, 439);
+            email.Location = new Point(559, 442);
             email.Name = "email";
             email.Size = new Size(224, 29);
             email.TabIndex = 22;
@@ -150,7 +178,7 @@
             // iduser
             // 
             iduser.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            iduser.Location = new Point(162, 405);
+            iduser.Location = new Point(559, 408);
             iduser.Name = "iduser";
             iduser.Size = new Size(224, 29);
             iduser.TabIndex = 21;
@@ -161,7 +189,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(71, 477);
+            label5.Location = new Point(468, 480);
             label5.Name = "label5";
             label5.Size = new Size(85, 21);
             label5.TabIndex = 17;
@@ -172,7 +200,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(96, 439);
+            label4.Location = new Point(493, 442);
             label4.Name = "label4";
             label4.Size = new Size(60, 21);
             label4.TabIndex = 16;
@@ -183,7 +211,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(12, 405);
+            label3.Location = new Point(409, 408);
             label3.Name = "label3";
             label3.Size = new Size(144, 21);
             label3.TabIndex = 15;
@@ -194,7 +222,7 @@
             hantra.CalendarFont = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             hantra.CustomFormat = "dd/MM/yyyy";
             hantra.Format = DateTimePickerFormat.Custom;
-            hantra.Location = new Point(160, 543);
+            hantra.Location = new Point(557, 546);
             hantra.Name = "hantra";
             hantra.Size = new Size(83, 23);
             hantra.TabIndex = 29;
@@ -205,7 +233,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(73, 545);
+            label2.Location = new Point(470, 548);
             label2.Name = "label2";
             label2.Size = new Size(83, 21);
             label2.TabIndex = 28;
@@ -250,74 +278,6 @@
             dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             dataGridView2.Size = new Size(649, 334);
             dataGridView2.TabIndex = 30;
-            // 
-            // tensach
-            // 
-            tensach.Enabled = false;
-            tensach.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tensach.Location = new Point(162, 473);
-            tensach.Name = "tensach";
-            tensach.Size = new Size(224, 29);
-            tensach.TabIndex = 31;
-            // 
-            // trangthai
-            // 
-            trangthai.Enabled = false;
-            trangthai.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            trangthai.Location = new Point(162, 508);
-            trangthai.Name = "trangthai";
-            trangthai.Size = new Size(224, 29);
-            trangthai.TabIndex = 33;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(61, 508);
-            label6.Name = "label6";
-            label6.Size = new Size(95, 21);
-            label6.TabIndex = 32;
-            label6.Text = "Trạng Thái:";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Times New Roman", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(655, 9);
-            label7.Name = "label7";
-            label7.Size = new Size(128, 28);
-            label7.TabIndex = 34;
-            label7.Text = "Sách Mượn";
-            // 
-            // Column1
-            // 
-            Column1.DataPropertyName = "masach";
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(34, 55, 113);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            Column1.DefaultCellStyle = dataGridViewCellStyle2;
-            Column1.HeaderText = "MS";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.DataPropertyName = "tensach";
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(34, 55, 113);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            Column2.DefaultCellStyle = dataGridViewCellStyle3;
-            Column2.HeaderText = "Tên Sách";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.DataPropertyName = "trangthai";
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(34, 55, 113);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            Column3.DefaultCellStyle = dataGridViewCellStyle4;
-            Column3.HeaderText = "Trạng Thái";
-            Column3.Name = "Column3";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -364,6 +324,47 @@
             Column6.DefaultCellStyle = dataGridViewCellStyle12;
             Column6.HeaderText = "Hạn Trả";
             Column6.Name = "Column6";
+            // 
+            // tensach
+            // 
+            tensach.Enabled = false;
+            tensach.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tensach.Location = new Point(559, 476);
+            tensach.Name = "tensach";
+            tensach.Size = new Size(224, 29);
+            tensach.TabIndex = 31;
+            // 
+            // trangthai
+            // 
+            trangthai.Enabled = false;
+            trangthai.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            trangthai.Location = new Point(559, 511);
+            trangthai.Name = "trangthai";
+            trangthai.Size = new Size(224, 29);
+            trangthai.TabIndex = 33;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(458, 511);
+            label6.Name = "label6";
+            label6.Size = new Size(95, 21);
+            label6.TabIndex = 32;
+            label6.Text = "Trạng Thái:";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Times New Roman", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(655, 9);
+            label7.Name = "label7";
+            label7.Size = new Size(128, 28);
+            label7.TabIndex = 34;
+            label7.Text = "Sách Mượn";
             // 
             // Form4
             // 

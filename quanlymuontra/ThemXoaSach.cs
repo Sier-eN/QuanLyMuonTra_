@@ -107,7 +107,7 @@ namespace quanlymuontra
         public void load_tentacgia()
         {
             string tacgia = "select tentg from tacgia";
-            SqlDataAdapter ad = new SqlDataAdapter(tacgia,con);
+            SqlDataAdapter ad = new SqlDataAdapter(tacgia, con);
             DataTable dt = new DataTable();
             ad.Fill(dt);
             tg.DataSource = dt;
@@ -161,14 +161,15 @@ namespace quanlymuontra
                     {
                         DateTime today = DateTime.Now;
                         con.Open();
-                        string themDL = "INSERT into sach(tensach,tacgia,theloai,ngayxuatban,trangthai,ngaythem) " +
-                        "VALUES(@tensach,@tacgia,@theloai,@ngayxuatban,@trangthai,@ngaythem)";
+                        string themDL = "INSERT into sach(tensach,tacgia,theloai,soluong,ngayxuatban,trangthai,ngaythem) " +
+                        "VALUES(@tensach,@tacgia,@theloai,@soluong,@ngayxuatban,@trangthai,@ngaythem)";
 
                         using (SqlCommand cmd = new SqlCommand(themDL, con))
                         {
                             cmd.Parameters.AddWithValue("@tensach", tensach.Text.Trim());
                             cmd.Parameters.AddWithValue("@tacgia", tg.Text.Trim());
                             cmd.Parameters.AddWithValue("@theloai", themtl.Text.Trim());
+                            cmd.Parameters.AddWithValue("@soluong", soluong.Text.Trim());
                             cmd.Parameters.AddWithValue("@ngayxuatban", nxb.Value);
                             cmd.Parameters.AddWithValue("@trangthai", trangthai.Text.Trim());
                             cmd.Parameters.AddWithValue("@ngaythem", today.ToString());
@@ -208,8 +209,9 @@ namespace quanlymuontra
                 tensach.Text = row.Cells[1].Value.ToString();
                 tg.Text = row.Cells[2].Value.ToString();
                 themtl.Text = row.Cells[3].Value.ToString();
-                nxb.Text = row.Cells[4].Value.ToString();
-                trangthai.Text = row.Cells[5].Value.ToString();
+                soluong.Text = row.Cells[4].Value.ToString();
+                nxb.Text = row.Cells[5].Value.ToString();
+                trangthai.Text = row.Cells[6].Value.ToString();
             }
 
         }
@@ -245,7 +247,7 @@ namespace quanlymuontra
                         {
                             con.Open();
                             DateTime today = DateTime.Today;
-                            string updateData = "UPDATE sach SET tensach =@tensach" + ", tacgia = @tacgia " + ", theloai= @theloai" +",ngaysua = @ngaysua"+
+                            string updateData = "UPDATE sach SET tensach =@tensach" + ", tacgia = @tacgia " + ", theloai= @theloai" +"soluong = @soluong" +",ngaysua = @ngaysua" +
                                 ", trangthai = @trangthai WHERE masach = @masach";
 
                             using (SqlCommand cmd = new SqlCommand(updateData, con))
@@ -253,6 +255,7 @@ namespace quanlymuontra
                                 cmd.Parameters.AddWithValue("@tensach", tensach.Text.Trim());
                                 cmd.Parameters.AddWithValue("@tacgia", tg.Text.Trim());
                                 cmd.Parameters.AddWithValue("@theloai", themtl.Text.Trim());
+                                cmd.Parameters.AddWithValue("@soluong", soluong.Text.Trim());
                                 cmd.Parameters.AddWithValue("@ngayxuatban", nxb.Value);
                                 cmd.Parameters.AddWithValue("@trangthai", trangthai.Text.Trim());
                                 cmd.Parameters.AddWithValue("@ngaysua", today);
@@ -293,7 +296,12 @@ namespace quanlymuontra
 
         private void tg_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

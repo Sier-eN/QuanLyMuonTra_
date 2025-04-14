@@ -17,8 +17,10 @@ namespace quanlymuontra
         public string tensach { get; set; }
         public string tacgia { get; set; }
         public string theloai { get; set; }
+        public string soluong { get; set; }
         public string ngayxuatban { get; set; }
         public string trangthai { get; set; }
+        
         public List<DLThemSach> dLThemSach()
         {
             List<DLThemSach> listdata = new List<DLThemSach>();
@@ -40,6 +42,7 @@ namespace quanlymuontra
                             dts.tensach = reader["tensach"].ToString();
                             dts.tacgia = reader["tacgia"].ToString();
                             dts.theloai = reader["theloai"].ToString();
+                            dts.soluong = reader["soluong"].ToString(); 
                             dts.ngayxuatban = reader["ngayxuatban"].ToString();
                             dts.trangthai = reader["trangthai"].ToString();
                             listdata.Add(dts);

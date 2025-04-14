@@ -296,5 +296,20 @@ namespace quanlymuontra
         {
             openChildFormInPanel(new trangchu());
         }
+
+        private void button11_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.button11.ForeColor = ColorTranslator.FromHtml("248, 132, 61");
+        }
+
+        private void button11_MouseLeave(object sender, EventArgs e)
+        {
+            this.button11.ForeColor = Color.White;
+        }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            openChildFormInPanel(new duyetmuontra());
+        }
     }
 }

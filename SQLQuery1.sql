@@ -1,1 +1,1 @@
-﻿select * from dksach
+﻿select * from taikhoan

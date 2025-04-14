@@ -1,4 +1,6 @@
-﻿namespace quanlymuontra
+﻿
+using System.Windows.Forms;
+namespace quanlymuontra
 {
     partial class Form1
     {
@@ -44,18 +46,18 @@
             // txttk
             // 
             txttk.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txttk.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txttk.Location = new Point(135, 68);
+            txttk.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txttk.Location = new Point(183, 109);
             txttk.Name = "txttk";
-            txttk.Size = new Size(209, 26);
+            txttk.Size = new Size(313, 32);
             txttk.TabIndex = 0;
             // 
             // txtpass
             // 
-            txtpass.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtpass.Location = new Point(135, 100);
+            txtpass.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtpass.Location = new Point(183, 155);
             txtpass.Name = "txtpass";
-            txtpass.Size = new Size(209, 26);
+            txtpass.Size = new Size(313, 32);
             txtpass.TabIndex = 1;
             txtpass.TextChanged += textBox2_TextChanged;
             // 
@@ -64,11 +66,11 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(32, 68);
+            label1.Location = new Point(48, 110);
             label1.Name = "label1";
-            label1.Size = new Size(97, 23);
+            label1.Size = new Size(129, 31);
             label1.TabIndex = 2;
             label1.Text = "Tài Khoản";
             // 
@@ -76,11 +78,11 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(36, 103);
+            label2.Location = new Point(53, 156);
             label2.Name = "label2";
-            label2.Size = new Size(93, 23);
+            label2.Size = new Size(124, 31);
             label2.TabIndex = 3;
             label2.Text = "Mật Khẩu";
             // 
@@ -89,11 +91,11 @@
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(108, 135);
+            label3.Location = new Point(183, 197);
             label3.Name = "label3";
-            label3.Size = new Size(108, 19);
+            label3.Size = new Size(143, 23);
             label3.TabIndex = 4;
             label3.Text = "Quên Mật Khẩu";
             label3.Click += label3_Click;
@@ -105,11 +107,11 @@
             button1.BackColor = Color.FromArgb(34, 55, 113);
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(84, 179);
+            button1.Location = new Point(155, 255);
             button1.Name = "button1";
-            button1.Size = new Size(209, 29);
+            button1.Size = new Size(255, 46);
             button1.TabIndex = 5;
             button1.Text = "Đăng Nhập";
             button1.UseVisualStyleBackColor = false;
@@ -122,11 +124,11 @@
             button2.BackColor = Color.FromArgb(34, 55, 113);
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(84, 214);
+            button2.Location = new Point(155, 307);
             button2.Name = "button2";
-            button2.Size = new Size(209, 29);
+            button2.Size = new Size(255, 46);
             button2.TabIndex = 6;
             button2.Text = "Đăng Ký";
             button2.UseVisualStyleBackColor = false;
@@ -146,9 +148,9 @@
             panel1.Controls.Add(txtpass);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(213, 78);
+            panel1.Location = new Point(234, 94);
             panel1.Name = "panel1";
-            panel1.Size = new Size(371, 273);
+            panel1.Size = new Size(547, 396);
             panel1.TabIndex = 7;
             panel1.Paint += panel1_Paint;
             // 
@@ -157,11 +159,11 @@
             checkBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             checkBox1.AutoSize = true;
             checkBox1.BackColor = Color.Transparent;
-            checkBox1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBox1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             checkBox1.ForeColor = Color.White;
-            checkBox1.Location = new Point(229, 134);
+            checkBox1.Location = new Point(346, 193);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(115, 23);
+            checkBox1.Size = new Size(150, 27);
             checkBox1.TabIndex = 12;
             checkBox1.Text = "Hiện mật khẩu";
             checkBox1.UseVisualStyleBackColor = false;
@@ -172,11 +174,11 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.FlatStyle = FlatStyle.Flat;
-            label4.Font = new Font("Times New Roman", 24F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Times New Roman", 48F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(108, 9);
+            label4.Location = new Point(110, 0);
             label4.Name = "label4";
-            label4.Size = new Size(168, 36);
+            label4.Size = new Size(338, 72);
             label4.TabIndex = 7;
             label4.Text = "Đăng Nhập";
             // 
@@ -186,7 +188,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Picture1;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1021, 574);
             Controls.Add(panel1);
             DoubleBuffered = true;
             Name = "Form1";

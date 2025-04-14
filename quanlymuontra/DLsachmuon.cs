@@ -29,7 +29,8 @@ namespace quanlymuontra
                 try
                 {
                     con.Open();
-                    string chondl = "SELECT * FROM dksach ";
+                    string chondl = "SELECT * FROM dksach WHERE trangthai = N'Chờ Duyệt Mượn'   ";
+                    string chon = "SELECT * FROM dksach WHERE trangthaii = N'Chưa Trả'";
                     using (SqlCommand cmd = new SqlCommand(chondl, con))
                     {
                         SqlDataReader reader = cmd.ExecuteReader();
@@ -42,6 +43,24 @@ namespace quanlymuontra
                            
                             dlm.ngaymuon = reader["ngaymuon"].ToString();
                             
+                            dlm.hantra = reader["hantra"].ToString();
+                            dlm.trangthai = reader["trangthai"].ToString();
+                            listdata.Add(dlm);
+                        }
+                        reader.Close();
+                    }
+                    using (SqlCommand cmd = new SqlCommand(chon, con))
+                    {
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            DLsachmuon dlm = new DLsachmuon();
+                            dlm.masach = (int)reader[masach];
+                            dlm.tensach = reader["tensach"].ToString();
+
+                            dlm.ngaymuon = reader["ngaymuon"].ToString();
+
                             dlm.hantra = reader["hantra"].ToString();
                             dlm.trangthai = reader["trangthai"].ToString();
                             listdata.Add(dlm);

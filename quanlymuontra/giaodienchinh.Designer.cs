@@ -1,4 +1,5 @@
-﻿namespace quanlymuontra
+﻿using System.Windows.Forms;
+namespace quanlymuontra
 {
     partial class giaodienchinh
     {
@@ -35,6 +36,7 @@
             button13 = new Button();
             button4 = new Button();
             qlkspanel = new Panel();
+            button11 = new Button();
             button10 = new Button();
             button8 = new Button();
             button6 = new Button();
@@ -51,9 +53,9 @@
             pictureBox1 = new PictureBox();
             panelgiaodien = new Panel();
             panel3 = new Panel();
+            label2 = new Label();
             pictureBox2 = new PictureBox();
             helpProvider1 = new HelpProvider();
-            label2 = new Label();
             panel1.SuspendLayout();
             cdpanel.SuspendLayout();
             qlkspanel.SuspendLayout();
@@ -90,9 +92,9 @@
             cdpanel.Controls.Add(button12);
             cdpanel.Controls.Add(button13);
             cdpanel.Dock = DockStyle.Top;
-            cdpanel.Location = new Point(0, 597);
+            cdpanel.Location = new Point(0, 635);
             cdpanel.Name = "cdpanel";
-            cdpanel.Size = new Size(303, 98);
+            cdpanel.Size = new Size(286, 98);
             cdpanel.TabIndex = 7;
             cdpanel.Visible = false;
             // 
@@ -106,7 +108,7 @@
             button12.ForeColor = Color.White;
             button12.Location = new Point(0, 36);
             button12.Name = "button12";
-            button12.Size = new Size(303, 36);
+            button12.Size = new Size(286, 36);
             button12.TabIndex = 5;
             button12.Text = "                              Đăng Xuất";
             button12.TextAlign = ContentAlignment.MiddleLeft;
@@ -125,7 +127,7 @@
             button13.ForeColor = Color.White;
             button13.Location = new Point(0, 0);
             button13.Name = "button13";
-            button13.Size = new Size(303, 36);
+            button13.Size = new Size(286, 36);
             button13.TabIndex = 4;
             button13.Text = "                              Thông Tin Tài Khoản";
             button13.TextAlign = ContentAlignment.MiddleLeft;
@@ -144,9 +146,9 @@
             button4.ForeColor = Color.White;
             button4.Image = Properties.Resources.dairhoj_e99c5ac0_06a9_45b2_9afe_50233848f75f_removebg_preview__1_;
             button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(0, 533);
+            button4.Location = new Point(0, 571);
             button4.Name = "button4";
-            button4.Size = new Size(303, 64);
+            button4.Size = new Size(286, 64);
             button4.TabIndex = 6;
             button4.Text = "                   Cài Đặt";
             button4.TextAlign = ContentAlignment.MiddleLeft;
@@ -158,6 +160,7 @@
             // qlkspanel
             // 
             qlkspanel.BackColor = Color.FromArgb(66, 96, 206);
+            qlkspanel.Controls.Add(button11);
             qlkspanel.Controls.Add(button10);
             qlkspanel.Controls.Add(button8);
             qlkspanel.Controls.Add(button6);
@@ -165,9 +168,28 @@
             qlkspanel.Dock = DockStyle.Top;
             qlkspanel.Location = new Point(0, 363);
             qlkspanel.Name = "qlkspanel";
-            qlkspanel.Size = new Size(303, 170);
+            qlkspanel.Size = new Size(286, 208);
             qlkspanel.TabIndex = 5;
             qlkspanel.Visible = false;
+            // 
+            // button11
+            // 
+            button11.BackColor = Color.FromArgb(66, 96, 206);
+            button11.Dock = DockStyle.Top;
+            button11.FlatAppearance.BorderSize = 0;
+            button11.FlatStyle = FlatStyle.Flat;
+            button11.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button11.ForeColor = Color.White;
+            button11.Location = new Point(0, 144);
+            button11.Name = "button11";
+            button11.Size = new Size(286, 36);
+            button11.TabIndex = 8;
+            button11.Text = "                              Duyệt Mượn Trả";
+            button11.TextAlign = ContentAlignment.MiddleLeft;
+            button11.UseVisualStyleBackColor = false;
+            button11.Click += button11_Click_1;
+            button11.MouseLeave += button11_MouseLeave;
+            button11.MouseMove += button11_MouseMove;
             // 
             // button10
             // 
@@ -179,7 +201,7 @@
             button10.ForeColor = Color.White;
             button10.Location = new Point(0, 108);
             button10.Name = "button10";
-            button10.Size = new Size(303, 36);
+            button10.Size = new Size(286, 36);
             button10.TabIndex = 7;
             button10.Text = "                              Báo Cáo, Thống Kê";
             button10.TextAlign = ContentAlignment.MiddleLeft;
@@ -198,7 +220,7 @@
             button8.ForeColor = Color.White;
             button8.Location = new Point(0, 72);
             button8.Name = "button8";
-            button8.Size = new Size(303, 36);
+            button8.Size = new Size(286, 36);
             button8.TabIndex = 6;
             button8.Text = "                              Quản Lý Người Dùng";
             button8.TextAlign = ContentAlignment.MiddleLeft;
@@ -217,7 +239,7 @@
             button6.ForeColor = Color.White;
             button6.Location = new Point(0, 36);
             button6.Name = "button6";
-            button6.Size = new Size(303, 36);
+            button6.Size = new Size(286, 36);
             button6.TabIndex = 5;
             button6.Text = "                              Quản Lý DL";
             button6.TextAlign = ContentAlignment.MiddleLeft;
@@ -236,7 +258,7 @@
             button9.ForeColor = Color.White;
             button9.Location = new Point(0, 0);
             button9.Name = "button9";
-            button9.Size = new Size(303, 36);
+            button9.Size = new Size(286, 36);
             button9.TabIndex = 4;
             button9.Text = "                              Quản Lý Sách";
             button9.TextAlign = ContentAlignment.MiddleLeft;
@@ -257,7 +279,7 @@
             button3.ImageAlign = ContentAlignment.MiddleLeft;
             button3.Location = new Point(0, 299);
             button3.Name = "button3";
-            button3.Size = new Size(303, 64);
+            button3.Size = new Size(286, 64);
             button3.TabIndex = 4;
             button3.Text = "                   Quản Lý Hệ Thống";
             button3.TextAlign = ContentAlignment.MiddleLeft;
@@ -273,7 +295,7 @@
             qltspanel.Dock = DockStyle.Top;
             qltspanel.Location = new Point(0, 245);
             qltspanel.Name = "qltspanel";
-            qltspanel.Size = new Size(303, 54);
+            qltspanel.Size = new Size(286, 54);
             qltspanel.TabIndex = 3;
             qltspanel.Visible = false;
             // 
@@ -287,7 +309,7 @@
             button7.ForeColor = Color.White;
             button7.Location = new Point(0, 0);
             button7.Name = "button7";
-            button7.Size = new Size(303, 36);
+            button7.Size = new Size(286, 36);
             button7.TabIndex = 5;
             button7.Text = "                              Trả Sách";
             button7.TextAlign = ContentAlignment.MiddleLeft;
@@ -308,7 +330,7 @@
             button2.ImageAlign = ContentAlignment.MiddleLeft;
             button2.Location = new Point(0, 181);
             button2.Name = "button2";
-            button2.Size = new Size(303, 64);
+            button2.Size = new Size(286, 64);
             button2.TabIndex = 2;
             button2.Text = "                   Trả Sách";
             button2.TextAlign = ContentAlignment.MiddleLeft;
@@ -324,7 +346,7 @@
             qlmspanel.Dock = DockStyle.Top;
             qlmspanel.Location = new Point(0, 129);
             qlmspanel.Name = "qlmspanel";
-            qlmspanel.Size = new Size(303, 52);
+            qlmspanel.Size = new Size(286, 52);
             qlmspanel.TabIndex = 1;
             qlmspanel.Visible = false;
             // 
@@ -338,7 +360,7 @@
             button5.ForeColor = Color.White;
             button5.Location = new Point(0, 0);
             button5.Name = "button5";
-            button5.Size = new Size(303, 36);
+            button5.Size = new Size(286, 36);
             button5.TabIndex = 2;
             button5.Text = "                              Thêm Sách Mượn";
             button5.TextAlign = ContentAlignment.MiddleLeft;
@@ -359,7 +381,7 @@
             button1.ImageAlign = ContentAlignment.MiddleLeft;
             button1.Location = new Point(0, 65);
             button1.Name = "button1";
-            button1.Size = new Size(303, 64);
+            button1.Size = new Size(286, 64);
             button1.TabIndex = 1;
             button1.Text = "                   Mượn Sách";
             button1.TextAlign = ContentAlignment.MiddleLeft;
@@ -376,7 +398,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(303, 65);
+            panel2.Size = new Size(286, 65);
             panel2.TabIndex = 0;
             // 
             // label1
@@ -422,17 +444,6 @@
             panel3.Size = new Size(1069, 65);
             panel3.TabIndex = 2;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(0, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(65, 65);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -443,6 +454,17 @@
             label2.Size = new Size(97, 23);
             label2.TabIndex = 2;
             label2.Text = "Trang Chủ";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(0, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(65, 65);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // giaodienchinh
             // 
@@ -497,5 +519,6 @@
         private PictureBox pictureBox2;
         private HelpProvider helpProvider1;
         private Label label2;
+        private Button button11;
     }
 }

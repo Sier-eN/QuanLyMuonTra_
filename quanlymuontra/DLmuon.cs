@@ -30,7 +30,47 @@ namespace quanlymuontra
                 try
                 {
                     con.Open();
-                    string chondl = "SELECT * FROM dksach ";
+                    string chondl = "SELECT * FROM dksach Where trangthai = N'Chưa Trả' ";
+                    string chond = "SELECT * FROM dksach Where trangthai = N'Chờ Duyệt Trả' ";
+                    string chon = "SELECT * FROM dksach Where trangthai = N'Chờ Duyệt Mượn' ";
+                    using (SqlCommand cm = new SqlCommand(chon, con))
+                    {
+                        SqlDataReader reader = cm.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            DLmuon dl = new DLmuon();
+                            dl.masach = (int)reader[masach];
+                            dl.iduser = reader["iduser"].ToString();
+                            dl.email = reader["email"].ToString();
+                            dl.tensach = reader["tensach"].ToString();
+                            dl.trangthai = reader["trangthai"].ToString();
+                            dl.ngaymuon = reader["ngaymuon"].ToString();
+                            dl.ngaytra = reader["ngaytra"].ToString();
+                            dl.hantra = reader["hantra"].ToString();
+
+                            listdata.Add(dl);
+                        }
+                        reader.Close();
+                    }
+                    using (SqlCommand cm = new SqlCommand(chond, con))
+                    {
+                        SqlDataReader reader = cm.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            DLmuon dl = new DLmuon();
+                            dl.masach = (int)reader[masach];
+                            dl.iduser = reader["iduser"].ToString();
+                            dl.email = reader["email"].ToString();
+                            dl.tensach = reader["tensach"].ToString();
+                            dl.trangthai = reader["trangthai"].ToString();
+                            dl.ngaymuon = reader["ngaymuon"].ToString();
+                            dl.ngaytra = reader["ngaytra"].ToString();
+                            dl.hantra = reader["hantra"].ToString();
+                            listdata.Add(dl);
+                        }
+                        reader.Close();
+                    }
                     using (SqlCommand cm = new SqlCommand(chondl, con))
                     {
                         SqlDataReader reader = cm.ExecuteReader();

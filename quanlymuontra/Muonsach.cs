@@ -53,6 +53,7 @@ namespace quanlymuontra
         }
         public void dpsachm()
         {
+            
             DLsachmuon dlm = new DLsachmuon();
             List<DLsachmuon> dl = dlm.dLSachmuon();
             dataGridView2.DataSource = dl;
@@ -77,14 +78,14 @@ namespace quanlymuontra
                     {
                         DateTime today = DateTime.Now;
                         con.Open();
+                        
                         string themDL = "INSERT into dksach(tensach,trangthai,iduser,email,ngaymuon,hantra) " +
-                        "VALUES(@tensach,@trangthai,@iduser,@email,@ngaymuon,@hantra)";
+                        "VALUES(@tensach,N'Chờ Duyệt Mượn',@iduser,@email,@ngaymuon,@hantra)";
 
                         using (SqlCommand cmd = new SqlCommand(themDL, con))
                         {
-                            trangthai.Text = "Chưa Trả";
+                            
                             cmd.Parameters.AddWithValue("@tensach", tensach.Text.Trim());
-                            cmd.Parameters.AddWithValue("trangthai", trangthai.Text.Trim());
                             cmd.Parameters.AddWithValue("iduser", iduser.Text.Trim());
                             cmd.Parameters.AddWithValue("email", email.Text.Trim());
                             cmd.Parameters.AddWithValue("@ngaymuon", today.ToString());

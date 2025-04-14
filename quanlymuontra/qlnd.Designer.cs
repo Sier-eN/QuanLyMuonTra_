@@ -1,4 +1,5 @@
-﻿namespace quanlymuontra
+﻿using System.Windows.Forms;
+namespace quanlymuontra
 {
     partial class qlnd
     {

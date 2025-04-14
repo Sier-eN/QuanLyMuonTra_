@@ -1,4 +1,5 @@
-﻿namespace quanlymuontra
+﻿using System.Windows.Forms;
+namespace quanlymuontra
 {
     partial class Form5
     {
@@ -42,6 +43,8 @@
             button2 = new Button();
             button3 = new Button();
             panel1 = new Panel();
+            soluong = new TextBox();
+            label3 = new Label();
             dateTimePicker1 = new DateTimePicker();
             tg = new ComboBox();
             themtl = new ComboBox();
@@ -58,6 +61,7 @@
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
@@ -71,7 +75,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Times New Roman", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(23, 284);
+            button1.Location = new Point(19, 345);
             button1.Name = "button1";
             button1.Size = new Size(136, 53);
             button1.TabIndex = 43;
@@ -84,11 +88,11 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Times New Roman", 15.75F);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(32, 80);
+            label5.Location = new Point(3, 81);
             label5.Name = "label5";
-            label5.Size = new Size(85, 21);
+            label5.Size = new Size(91, 23);
             label5.TabIndex = 33;
             label5.Text = "Tên Sách:";
             // 
@@ -99,7 +103,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Times New Roman", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(23, 343);
+            button2.Location = new Point(19, 404);
             button2.Name = "button2";
             button2.Size = new Size(136, 53);
             button2.TabIndex = 44;
@@ -116,7 +120,7 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Times New Roman", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(169, 284);
+            button3.Location = new Point(165, 345);
             button3.Name = "button3";
             button3.Size = new Size(136, 53);
             button3.TabIndex = 45;
@@ -129,6 +133,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(19, 33, 69);
+            panel1.Controls.Add(soluong);
+            panel1.Controls.Add(label3);
             panel1.Controls.Add(dateTimePicker1);
             panel1.Controls.Add(tg);
             panel1.Controls.Add(themtl);
@@ -148,6 +154,26 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(320, 573);
             panel1.TabIndex = 48;
+            panel1.Paint += panel1_Paint;
+            // 
+            // soluong
+            // 
+            soluong.Font = new Font("Times New Roman", 14.25F);
+            soluong.Location = new Point(165, 229);
+            soluong.Name = "soluong";
+            soluong.Size = new Size(82, 29);
+            soluong.TabIndex = 62;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 15.75F);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(3, 229);
+            label3.Name = "label3";
+            label3.Size = new Size(97, 23);
+            label3.TabIndex = 61;
+            label3.Text = "Số Lượng:";
             // 
             // dateTimePicker1
             // 
@@ -158,21 +184,21 @@
             // 
             // tg
             // 
-            tg.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tg.Font = new Font("Times New Roman", 14.25F);
             tg.FormattingEnabled = true;
-            tg.Location = new Point(165, 116);
+            tg.Location = new Point(165, 118);
             tg.Name = "tg";
-            tg.Size = new Size(140, 23);
+            tg.Size = new Size(140, 29);
             tg.TabIndex = 59;
             tg.SelectedIndexChanged += tg_SelectedIndexChanged;
             // 
             // themtl
             // 
-            themtl.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            themtl.Font = new Font("Times New Roman", 14.25F);
             themtl.FormattingEnabled = true;
-            themtl.Location = new Point(165, 154);
+            themtl.Location = new Point(165, 155);
             themtl.Name = "themtl";
-            themtl.Size = new Size(140, 23);
+            themtl.Size = new Size(140, 29);
             themtl.TabIndex = 58;
             // 
             // button4
@@ -182,7 +208,7 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Times New Roman", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(169, 343);
+            button4.Location = new Point(165, 404);
             button4.Name = "button4";
             button4.Size = new Size(136, 53);
             button4.TabIndex = 57;
@@ -192,74 +218,74 @@
             // 
             // trangthai
             // 
-            trangthai.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            trangthai.Font = new Font("Times New Roman", 14.25F);
             trangthai.FormattingEnabled = true;
             trangthai.Items.AddRange(new object[] { "Có Thể Mượn", "Không Thể Mượn" });
-            trangthai.Location = new Point(165, 193);
+            trangthai.Location = new Point(165, 192);
             trangthai.Name = "trangthai";
-            trangthai.Size = new Size(112, 23);
+            trangthai.Size = new Size(112, 29);
             trangthai.TabIndex = 56;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Times New Roman", 15.75F);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(32, 192);
+            label6.Location = new Point(3, 192);
             label6.Name = "label6";
-            label6.Size = new Size(95, 21);
+            label6.Size = new Size(105, 23);
             label6.TabIndex = 55;
             label6.Text = "Trạng Thái:";
             // 
             // nxb
             // 
             nxb.CustomFormat = "dd/MM/yyyy";
-            nxb.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            nxb.Font = new Font("Times New Roman", 14.25F);
             nxb.Format = DateTimePickerFormat.Custom;
-            nxb.Location = new Point(165, 231);
+            nxb.Location = new Point(165, 266);
             nxb.Name = "nxb";
-            nxb.Size = new Size(82, 21);
+            nxb.Size = new Size(82, 29);
             nxb.TabIndex = 54;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Times New Roman", 15.75F);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(32, 231);
+            label7.Location = new Point(3, 266);
             label7.Name = "label7";
-            label7.Size = new Size(127, 21);
+            label7.Size = new Size(142, 23);
             label7.TabIndex = 53;
             label7.Text = "Ngày Xuất Bản:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Times New Roman", 15.75F);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(30, 156);
+            label2.Location = new Point(3, 155);
             label2.Name = "label2";
-            label2.Size = new Size(129, 21);
+            label2.Size = new Size(142, 23);
             label2.TabIndex = 51;
             label2.Text = "Thêm Thể Loại:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Times New Roman", 15.75F);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(30, 116);
+            label1.Location = new Point(3, 118);
             label1.Name = "label1";
-            label1.Size = new Size(122, 21);
+            label1.Size = new Size(133, 23);
             label1.TabIndex = 49;
             label1.Text = "Thêm Tác Giả:";
             // 
             // tensach
             // 
-            tensach.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tensach.Font = new Font("Times New Roman", 14.25F);
             tensach.Location = new Point(165, 81);
             tensach.Name = "tensach";
-            tensach.Size = new Size(140, 21);
+            tensach.Size = new Size(140, 29);
             tensach.TabIndex = 48;
             // 
             // dataGridView1
@@ -277,9 +303,9 @@
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeight = 40;
+            dataGridView1.ColumnHeadersHeight = 55;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { MS, Column2, Column3, Column4, Column5, Column6 });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { MS, Column2, Column3, Column4, Column1, Column5, Column6 });
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = Color.FromArgb(34, 55, 113);
             dataGridViewCellStyle8.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -325,7 +351,7 @@
             Column2.HeaderText = "Tên Sách";
             Column2.Name = "Column2";
             Column2.ReadOnly = true;
-            Column2.Width = 200;
+            Column2.Width = 185;
             // 
             // Column3
             // 
@@ -349,6 +375,14 @@
             Column4.Name = "Column4";
             Column4.ReadOnly = true;
             Column4.Width = 125;
+            // 
+            // Column1
+            // 
+            Column1.DataPropertyName = "soluong";
+            Column1.HeaderText = "SL";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            Column1.Width = 35;
             // 
             // Column5
             // 
@@ -410,10 +444,13 @@
         private DataGridView dataGridView1;
         private ComboBox tg;
         private DateTimePicker dateTimePicker1;
+        private TextBox soluong;
+        private Label label3;
         private DataGridViewTextBoxColumn MS;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
     }

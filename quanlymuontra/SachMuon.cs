@@ -77,11 +77,16 @@ namespace quanlymuontra
                 {
                 MessageBox.Show("Sách đã trả rồi!!", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            else if (trangthai.Text == "Chờ Duyệt Mượn")
+            {
+                MessageBox.Show("Sách chưa được duyệt mượn!!", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
             else
             {
                 if (con.State != ConnectionState.Open)
                 {
-                    DialogResult check = MessageBox.Show("Bạn Muốn Trả Sách"
+                    DialogResult check = MessageBox.Show("Bạn Muốn Trả Sách "
                         + masach + "?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     if (check == DialogResult.Yes)
@@ -90,7 +95,7 @@ namespace quanlymuontra
                         {
                             con.Open();
                             DateTime today = DateTime.Today;
-                            string updateData = "UPDATE dksach SET trangthai = N'Đã Trả' " + ",ngaytra = @ngaytra WHERE masach = @masach";
+                            string updateData = "UPDATE dksach SET trangthai = N'Chờ Duyệt Trả' " + ",ngaytra = @ngaytra WHERE masach = @masach";
 
                             using (SqlCommand cmd = new SqlCommand(updateData, con))
                             {
@@ -102,7 +107,7 @@ namespace quanlymuontra
 
                                 dpsachm();
 
-                                MessageBox.Show("Cập Nhật Thành Công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Hãy Đến Thư Viện Để Đóng Dấu Mượn Nhé!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 clearFields();
                             }

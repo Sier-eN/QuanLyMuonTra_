@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace quanlymuontra
 {
-    public partial class baocaothongke: Form
+    public partial class baocaothongke : Form
     {
         public baocaothongke()
         {
             InitializeComponent();
+        }
+
+        private void baocaothongke_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

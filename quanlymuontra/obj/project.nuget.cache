@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "679Ix0Q07do=",
+  "dgSpecHash": "mrcak4ae2u4=",
   "success": true,
   "projectFilePath": "C:\\Users\\Nghia Nguyen\\source\\repos\\quanlymuontra\\quanlymuontra\\quanlymuontra.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Nghia Nguyen\\.nuget\\packages\\microsoft.visualbasic\\10.3.0\\microsoft.visualbasic.10.3.0.nupkg.sha512",
     "C:\\Users\\Nghia Nguyen\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Nghia Nguyen\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Nghia Nguyen\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,6 +36,23 @@ namespace quanlymuontra
             {
                 MessageBox.Show("Hãy điền đầy đủ thông tin", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (txttk.Text.Length < 6)
+            {
+                MessageBox.Show("Tên đăng nhập phải lớn hơn 6 ký tự", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtmk.Text.Length < 6)
+            {
+                MessageBox.Show("Mật khẩu phải lớn hơn 6 ký tự", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtmk.Text != txtmk2.Text)
+            {
+                MessageBox.Show("Mật khẩu không khớp", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!Regex.IsMatch(txtemail.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("Email không hợp lệ", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             else
             {
                 if (con.State != ConnectionState.Open)
@@ -42,8 +60,7 @@ namespace quanlymuontra
                     try
                     {
                         con.Open();
-                        String kttk = "SELECT * FROM taikhoan Where taikhoan = '"
-                            + txttk.Text.Trim() + "'";
+                        String kttk = "SELECT * FROM taikhoan Where taikhoan = '"+ txttk.Text.Trim() + "'";
                         using (SqlCommand kt = new SqlCommand(kttk, con))
                         {
                             SqlDataAdapter adapter = new SqlDataAdapter(kt);
@@ -51,7 +68,7 @@ namespace quanlymuontra
                             adapter.Fill(dt);
                             if (dt.Rows.Count >= 1)
                             {
-                                MessageBox.Show(txttk.Text + "Tên Đăng Nhập Đã tồn tại", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show(txttk.Text + " Tên Đăng Nhập Đã tồn tại", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
@@ -127,6 +144,11 @@ namespace quanlymuontra
         }
 
         private void txtemail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

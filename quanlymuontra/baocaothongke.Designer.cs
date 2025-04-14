@@ -37,6 +37,7 @@
             ClientSize = new Size(1053, 597);
             Name = "baocaothongke";
             Text = "baocaothongke";
+            Load += baocaothongke_Load;
             ResumeLayout(false);
         }
 
